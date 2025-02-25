@@ -88,4 +88,10 @@ public interface UserService extends IService<User> {
      */
     boolean userLogout(HttpServletRequest request);
 
+    /**
+     *
+     * @param user
+     * @return
+     */
+    boolean isAdmin(User user);
 }

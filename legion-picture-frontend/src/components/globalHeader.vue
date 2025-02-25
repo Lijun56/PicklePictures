@@ -69,10 +69,20 @@ const originItems = [
     title: 'admin',
   },
   {
+    key:'/add_picture',
+    label: 'Add Picture',
+    title: 'Add Picture',
+  },
+  {
     key: 'others',
     label: h('a', { href: 'https://www.stefenz.com', target: '_blank' }, 'Directory'),
     title: 'Directory',
   },
+  {
+    key: '/admin/pictureManage',
+    label: 'Picture Management',
+    title: 'Picture Management',
+  }
 ]
 const filterMenus = (menus = [] as MenuProps['items']) =>{
   return menus?.filter((menu)=>{

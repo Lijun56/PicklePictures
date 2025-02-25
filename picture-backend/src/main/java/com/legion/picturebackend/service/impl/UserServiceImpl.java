@@ -202,6 +202,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         request.getSession().removeAttribute(UserConstant.USER_LOGIN_STATE);
         return true;
     }
+
+    @Override
+    public boolean isAdmin(User user) {
+        if(user == null){
+            return false;
+        }
+//        return false when user is not admin
+        return !UserRoleEnum.ADMIN.getValue().equals(user.getUserRole());
+    }
 }
 
 
