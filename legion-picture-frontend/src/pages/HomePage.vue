@@ -14,11 +14,11 @@
   </div>
   <!-- 分类 + 标签 -->
   <a-tabs v-model:activeKey="selectedCategory" @change="doSearch">
-    <a-tab-pane key="all" tab="全部" />
+    <a-tab-pane key="all" tab="All" />
     <a-tab-pane v-for="category in categoryList" :key="category" :tab="category" />
   </a-tabs>
   <div class="tag-bar">
-    <span style="margin-right: 8px">标签：</span>
+    <span style="margin-right: 8px">Tags：</span>
     <a-space :size="[0, 8]" wrap>
       <a-checkable-tag
         v-for="(tag, index) in tagList"
